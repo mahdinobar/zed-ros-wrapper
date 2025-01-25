@@ -33,7 +33,7 @@ general:
     pub_frame_rate:             60.0                            # frequency of publishing of video and depth data (see SDK API "InitParameters::grab_compute_capping_fps")
     svo_realtime:               false                            # if true the input SVO will be played trying to respect the original framerate eventually skipping frames, otherwise every frame will be processed respecting the `pub_frame_rate` setting
     #region_of_interest:         '[]'
-    region_of_interest:         '[[0.8,0.4],[0.8,0.8],[0.55,0.8],[0.55,0.4]]'                            # Conveyor belt region first column is x_cv2 and second column of array is y_cv2 direction; A polygon defining the ROI where the ZED SDK perform the processing ignoring the rest. Coordinates must be normalized to '1.0' to be resolution independent. column0: x horizontal right, column1: y vertical down positive
+    region_of_interest:         '[[0.79,0.07],[0.79,0.62],[0.5,0.62],[0.5,0.07]]'                            # Conveyor belt region first column is x_cv2 and second column of array is y_cv2 direction; A polygon defining the ROI where the ZED SDK perform the processing ignoring the rest. Coordinates must be normalized to '1.0' to be resolution independent. column0: x horizontal right, column1: y vertical down positive (U shape!)
     #region_of_interest:        '[[0.25,0.33],[0.75,0.33],[0.75,0.5],[0.5,0.75],[0.25,0.5]]' # A polygon defining the ROI where the ZED SDK perform the processing ignoring the rest. Coordinates must be normalized to '1.0' to be resolution independent.
     #region_of_interest:        '[[0.25,0.25],[0.75,0.25],[0.75,0.75],[0.25,0.75]]' # A polygon defining the ROI where the ZED SDK perform the processing ignoring the rest. Coordinates must be normalized to '1.0' to be resolution independent.
     #region_of_interest:        '[[0.5,0.25],[0.75,0.5],[0.5,0.75],[0.25,0.5]]' # A polygon defining the ROI where the ZED SDK perform the processing ignoring the rest. Coordinates must be normalized to '1.0' to be resolution independent.
@@ -42,7 +42,7 @@ general:
 
 depth:
     depth_mode:                 'NEURAL_PLUS'                         # 'NONE', 'PERFORMANCE', 'QUALITY', 'ULTRA', 'NEURAL', `NEURAL_PLUS`
-    depth_stabilization:        0                               # [0-100] - 0: Disabled
+    depth_stabilization:        10                               # [0-100] - 0: Disabled
     openni_depth_mode:          false                           # 'false': 32bit float meter units, 'true': 16bit uchar millimeter units
 
 pos_tracking:
